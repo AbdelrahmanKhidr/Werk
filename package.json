@@ -1,0 +1,23 @@
+{
+  "name": "werk",
+  "version": "1.0.0",
+  "description": "Digitalizing the Temp Agency",
+  "main": "werk_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TenthEstate/Werk.git"
+  },
+  "keywords": [
+    "\"Temp\"",
+    "\"Agency\""
+  ],
+  "author": "Christopher Bathgate <christopher.bathgate@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TenthEstate/Werk/issues"
+  },
+  "homepage": "https://github.com/TenthEstate/Werk#readme"
+}
