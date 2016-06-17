@@ -1,5 +1,6 @@
 {
   "name": "werk",
+  "private": true,
   "version": "1.0.0",
   "description": "Digitalizing the Temp Agency",
   "main": "werk_server.js",
@@ -11,13 +12,35 @@
     "url": "git+https://github.com/TenthEstate/Werk.git"
   },
   "keywords": [
-    "\"Temp\"",
-    "\"Agency\""
+    "Temp",
+    "Agency"
   ],
   "author": "Christopher Bathgate <christopher.bathgate@gmail.com>",
+  "contributors":[{
+    "name": "Christopher Bathgate",
+    "email": "christopher.bathgate@gmail.com"
+  }],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TenthEstate/Werk/issues"
   },
-  "homepage": "https://github.com/TenthEstate/Werk#readme"
+  "homepage": "https://github.com/TenthEstate/Werk#readme",
+  "dependencies": {
+    "express": "*",
+    "handlebars": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-nodeunit": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-ts":"*",
+    "matchdep": "*",
+    "typescript": "*",
+    "grunt-express-server":"*",
+    "grunt-express":"*"
+  }
 }
