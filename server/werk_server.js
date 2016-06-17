@@ -1,10 +1,11 @@
 var express = require('express');
 var app = express();
-app.set("port", process.env.PORT || 3000);
+var accessPort = 3000;
+app.set("port", process.env.PORT || accessPort);
 app.get('/', function (req, res) {
-    res.send("express works doggy dog");
+    res.send("express works doggy");
 });
 app.listen(app.get("port"), function () {
-    console.log("It works doggy dog frog");
+    console.log("Server running on port " + accessPort + " Press Ctrl-C to quit");
 });
 //# sourceMappingURL=werk_server.js.map

@@ -7,13 +7,29 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON("package.json"),
 
         watch: {
+            options: {
+                livereload: true
+            },
             sass: {
                 files: "client/style/*.scss",
-                tasks: ['sass','cssmin']
+                tasks: ['sass','cssmin'],
+                options: {
+                    livereload: false
+                }
             },
             ts: {
                 files:"server/*.ts",
                 tasks: ['ts']
+            },
+            express: {
+                files: ['**/*.js'],
+                tasks: ['express:dev'],
+                options: {
+                    spawn: false
+                }
+            },
+            public: {
+                files: ["client/**/*.css"]
             }
         },
         cssmin:{
@@ -56,21 +72,28 @@ module.exports = function(grunt){
             }
         },
         express: {
-            server: {
-                server: 'server/werk_server.js',
-                port:3000,
-                hostname:'localhost',
-                livereload: true,
-                serverreload: true
+            options: {
+                // Override defaults here
+            },
+            dev: {
+                options: {
+                    script: 'server/werk_server.js'
+                }
             }
+        },
+        clean: {
+            server: ['server/**/*.js'],
+            client: ['client/**/*.js']
         }
+
     });
 
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks("grunt-ts");
-    grunt.loadNpmTasks("grunt-express");
-    grunt.registerTask("default", ["express:server","watch" ]);
+    grunt.loadNpmTasks('grunt-express-server');
+    grunt.loadNpmTasks('grunt-exec');
+    grunt.loadNpmTasks('grunt-ts');
+    grunt.registerTask("default", ["express","watch"]);
 };

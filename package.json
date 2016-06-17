@@ -37,10 +37,12 @@
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-sass": "*",
     "grunt-contrib-watch": "*",
+    "grunt-contrib-clean": "*",
     "grunt-ts":"*",
     "matchdep": "*",
     "typescript": "*",
     "grunt-express-server":"*",
-    "grunt-express":"*"
+    "grunt-exec":"*"
+
   }
 }
