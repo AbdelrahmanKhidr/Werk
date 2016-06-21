@@ -92,6 +92,11 @@ module.exports = function(grunt){
         clean: {
             server: ['server/**/*.js'],
             client: ['client/**/*.js']
+        },
+        exec: {
+            typings: {
+                cmd: 'python typings/make_typings.py > _werkTypings.d.ts'
+            }
         }
 
     });

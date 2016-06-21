@@ -10,8 +10,8 @@
 
  =============================================== */
 
-/// <reference path="../serve-static/serve-static.d.ts" />
-/// <reference path="../express-serve-static-core/express-serve-static-core.d.ts" />
+/// <reference path="../typings/serve-static.d.ts" />
+/// <reference path="../typings/express-serve-static-core.d.ts" />
 
 declare module "express" {
     import * as serveStatic from "serve-static";

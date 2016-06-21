@@ -61,8 +61,6 @@ app.use(function (req, res) {
 });
 app.use(function (err, req, res, next) {
     console.error("stack");
-    res.status(500);
-    res.render('500');
 });
 app.listen(app.get("port"), function () {
     console.log("Server running on port " + app.get("port") + " Press Ctrl-C to quit");
