@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "Digitalizing the Temp Agency",
-  "main": "werk_server.js",
+  "main": "werk.js",
   "engines": {
     "npm": "^2.15.5",
     "node": "^4.4.5"
@@ -38,8 +38,7 @@
     "express": "*",
     "express-handlebars": "*",
     "formidable": "*",
-    "rxjs": "*",
-    "typings": "^1.3.0"
+    "rxjs": "*"
   },
   "devDependencies": {
     "grunt": "*",
@@ -55,6 +54,7 @@
     "matchdep": "*",
     "typescript": "*",
     "grunt-express-server": "*",
-    "grunt-exec": "*"
+    "grunt-exec": "*",
+    "typings": "^1.3.0"
   }
 }

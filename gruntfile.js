@@ -71,21 +71,13 @@ module.exports = function(grunt){
                 src: ["**/*.ts", "!node_modules/**"]
             }
         },
-        tslint: {
-            options: {
-                configuration: "tslint.json"
-            },
-            files: {
-                src: ["**/*.ts"]
-            }
-        },
         express: {
             options: {
                 // Override defaults here
             },
             dev: {
                 options: {
-                    script: 'werk_server.js'
+                    script: 'werk.js'
                 }
             }
         },
@@ -95,7 +87,7 @@ module.exports = function(grunt){
         },
         exec: {
             typings: {
-                cmd: 'python typings/make_typings.py > _werkTypings.d.ts'
+                cmd: 'python typings/make_typings.py > typings/_werkTypings.d.ts'
             }
         }
 
