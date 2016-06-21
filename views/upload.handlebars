@@ -1,0 +1,7 @@
+<h1>File Upload</h1>
+<form role="form" enctype="multipart/form-data" method="POST" action="/file-upload/{{year}}/{{month}}">
+    <h3> {{year}} {{month}} </h3>
+    <input type="text" name="title">
+    <input type="file" required accept="image/*" name="photo">
+    <button type="submit">Submit</button>
+</form>

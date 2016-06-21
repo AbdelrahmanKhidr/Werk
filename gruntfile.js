@@ -11,18 +11,18 @@ module.exports = function(grunt){
                 livereload: true
             },
             sass: {
-                files: "client/style/*.scss",
+                files: "style/*.scss",
                 tasks: ['sass','cssmin'],
                 options: {
                     livereload: false
                 }
             },
             ts: {
-                files:"server/*.ts",
+                files:"*.ts",
                 tasks: ['ts']
             },
             express: {
-                files: ['**/*.js'],
+                files: ['**/*.js','**/*.handlebars'],
                 tasks: ['express:dev'],
                 options: {
                     spawn: false
@@ -36,7 +36,7 @@ module.exports = function(grunt){
             my_target: {
                 files: [{
                     expand: true,
-                    cwd:"client/style",
+                    cwd:"style",
                     src:["*.css",'!*.min.css'],
                     dest: 'client/style',
                     ext: '.min.css'
@@ -50,9 +50,9 @@ module.exports = function(grunt){
           my_target: {
               files: [{
                   expand: true,
-                  cwd: 'server/',
+                  cwd: '.',
                   src: "**/*.js",
-                  dest:'server'
+                  dest:'.'
               }]
           }
         },
@@ -62,7 +62,7 @@ module.exports = function(grunt){
                     style: 'expanded'
                 },
                 files: {
-                    'client/style/werk.css' : 'client/style/*.scss'
+                    'client/style/werk.css' : 'style/*.scss'
                 }
             }
         },
@@ -71,13 +71,21 @@ module.exports = function(grunt){
                 src: ["**/*.ts", "!node_modules/**"]
             }
         },
+        tslint: {
+            options: {
+                configuration: "tslint.json"
+            },
+            files: {
+                src: ["**/*.ts"]
+            }
+        },
         express: {
             options: {
                 // Override defaults here
             },
             dev: {
                 options: {
-                    script: 'server/werk_server.js'
+                    script: 'werk_server.js'
                 }
             }
         },
@@ -95,5 +103,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-ts');
-    grunt.registerTask("default", ["express","watch"]);
+    grunt.registerTask("default", ["ts","sass","express","watch"]);
 };

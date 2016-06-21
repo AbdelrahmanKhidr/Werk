@@ -1,7 +1,7 @@
 {
 "version": 3,
 "mappings": "AAAA,UAAW;EACT,KAAK,EAAC,MAAM",
-"sources": ["werk.scss"],
+"sources": ["../../style/werk.scss"],
 "names": [],
 "file": "werk.css"
 }

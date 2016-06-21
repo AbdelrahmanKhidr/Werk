@@ -4,8 +4,13 @@
   "version": "1.0.0",
   "description": "Digitalizing the Temp Agency",
   "main": "werk_server.js",
+  "engines": {
+    "npm": "^2.15.5",
+    "node": "^4.4.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "grunt"
   },
   "repository": {
     "type": "git",
@@ -16,18 +21,25 @@
     "Agency"
   ],
   "author": "Christopher Bathgate <christopher.bathgate@gmail.com>",
-  "contributors":[{
-    "name": "Christopher Bathgate",
-    "email": "christopher.bathgate@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Christopher Bathgate",
+      "email": "christopher.bathgate@gmail.com"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TenthEstate/Werk/issues"
   },
   "homepage": "https://github.com/TenthEstate/Werk#readme",
   "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
     "express": "*",
-    "handlebars": "*"
+    "express-handlebars": "*",
+    "formidable": "*",
+    "rxjs": "*",
+    "typings": "^1.3.0"
   },
   "devDependencies": {
     "grunt": "*",
@@ -38,11 +50,11 @@
     "grunt-contrib-sass": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-clean": "*",
-    "grunt-ts":"*",
+    "grunt-ts": "*",
+    "grunt-tslint": "*",
     "matchdep": "*",
     "typescript": "*",
-    "grunt-express-server":"*",
-    "grunt-exec":"*"
-
+    "grunt-express-server": "*",
+    "grunt-exec": "*"
   }
 }

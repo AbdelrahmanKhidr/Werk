@@ -1,0 +1,14 @@
+<div>
+    <h1>Contact Us</h1>
+
+    <form role='form' action='/process?form=contactus' method='POST'>
+        <input type="hidden" name="_csrf" value="{{csrf}}">
+        <input type="text" name="email">
+        <input type="text" name="ques">
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr/>
+
+
+</div>
